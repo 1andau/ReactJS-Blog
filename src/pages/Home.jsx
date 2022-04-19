@@ -1,54 +1,45 @@
 import React, { useState } from 'react';
-import EmptyList from '../components/EmptyList';
-import BlogList from '../components/BlockStorage';
-import Header from '../components/Header';
-import SearchBar from '../components/Search';
-
-import { blogList } from '../config/data';
-
+import { useDispatch, useSelector } from 'react-redux';
+import Cards from '../components/Cards';
+import { fetchBlogs } from '../redux/actions/blog';
 
 
 const Home = () => {
-  const [blogs, setBlogs] = useState(blogList);
-  const [searchKey, setSearchKey] = useState('');
+  const dispatch = useDispatch();
+  const items = useSelector(({blogs})=> blogs.items); //map
 
-  // Search submit
-  const handleSearchBar = (e) => {
-    e.preventDefault();
-    handleSearchResults();
-  };
-
-  // Search for blog by category
-  const handleSearchResults = () => {
-    const allBlogs = blogList;
-    const filteredBlogs = allBlogs.filter((blog) =>
-      blog.category.toLowerCase().includes(searchKey.toLowerCase().trim())
-    );
-    setBlogs(filteredBlogs);
-  };
-
-  // Clear search and show all blogs
-  const handleClearSearch = () => {
-    setBlogs(blogList);
-    setSearchKey('');
-  };
+  React.useEffect(() => {
+    dispatch(fetchBlogs());
+     }, []);
+    
+    
+ 
 
   return (
     <div>
-      {/* Page Header */}
 
-      {/* Search Bar */}
-      <SearchBar
-        value={searchKey}
-        clearSearch={handleClearSearch}
-        formSubmit={handleSearchBar}
-        handleSearchKey={(e) => setSearchKey(e.target.value)}
-      />
+<div className="blogList-wrap">
+     
+{
+items.map((obj) => ( 
 
-      {/* Blog List & Empty View */}
+<Cards 
+ key={obj.id}
+ {...obj}
+   />
 
-      {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} />}
+   
+   ))
+ }
+
+
     </div>
+  </div>
+ 
+    
+
+
+
   );
 };
 
