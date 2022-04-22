@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import PopupItem from './PopupItem';
 import {clearFavorites} from '../redux/actions/popup'
-
+import Header from '../components/Header';
 
 function Popup () {
 
@@ -23,12 +23,11 @@ function Popup () {
   
   return (
     <>
+        <Header/>
 
-    <Link className='blog-goBack' 
-      to='/'>
-            <Button onClick={onClearFavorites}> 
+    <Link className='button_account' 
+      to='/' onClick={onClearFavorites}>
             Goooooo back
-        </Button>
 
 
       </Link>
@@ -51,40 +50,6 @@ description = {obj.description}
 ))}
 
 
-
-
-
-
- <div className="comments">
-
-<h2>Leave a comment</h2>
-
-<form className="comments__form">
-  <div className="comments__form-info">
-
-    <div className="comments__form-field">
-      <input id="comments__form-label-name" name="author" placeholder="Name" type="text" className="comments__form-input"/>
-      <label className="comments__form-label" for="comments__form-label-name">
-        <span className="comments__form-label-text">Name</span>
-      </label>
-    </div>
-  </div>
-
-  <div className="comments__form-text">
-    
-    <div className="comments__form-field">
-      <textarea id="comments__form-label-text" name="author" placeholder="Express your thoughts" type="text" className="comments__form-input comments__form-textarea"></textarea>
-      <label className="comments__form-label" for="comments__form-label-text">
-        <span className="comments__form-label-text">Express your thoughts</span>
-      </label>
-    </div>
-
-  </div>
-<Button> Send</Button>
-</form>
-<div className="comments__list">
-</div>
-</div>  
 
 
         </div>

@@ -10,10 +10,10 @@ const Header = () => (
           <ul className="nav_links">
           <Link className='links' to='/'>Home</Link>
             <Link className='links' to='/favorites'>Favorites</Link>
-            <Link className='links' to='/write'>Write</Link>
+            <Link className='links' to='/account'>Account</Link>
           </ul>
         </nav>
-        <Link to='/account'><Button className="btn_go" >go to profile</Button></Link>
+        <Link to='/signin'><Button className="button_account" >sign in</Button></Link>
       </header>
 );
 

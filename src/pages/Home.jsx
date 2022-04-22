@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Cards from '../components/Cards';
 import { fetchBlogs } from '../redux/actions/blog';
-
+import Header from '../components/Header';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,6 +25,7 @@ const Home = () => {
 
   return (
     <div>
+        <Header/>
 
 <div className="blogList-wrap">
 

@@ -37,8 +37,6 @@ function Cards( {
         </div>
 
  
- 
-
        <Link className='blogItem-link' to='/popup'
         onClick={onClickReadMore}>
 
