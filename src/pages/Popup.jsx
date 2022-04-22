@@ -1,49 +1,61 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
-import { blogList } from '../config/data';
-import EmptyList from '../components//EmptyList';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
-
-const Popup = () => {
-
-  // const { id } = useParams();
-  // const [blog, setBlog] = useState(null);
-
-  // useEffect(() => {
-  //   let blog = blogList.find((blog) => blog.id === parseInt(id));
-  //   if (blog) {
-  //     setBlog(blog);
-  //   }
-  // }, []);
+import { useDispatch, useSelector } from 'react-redux';
+import PopupItem from './PopupItem';
+import {clearFavorites} from '../redux/actions/popup'
 
 
+function Popup () {
 
+  const dispatch = useDispatch();
+  const {items} = useSelector(({popup}) => popup); 
+
+  const addedGuides = Object.keys(items).map((key)=>{
+    return items [key].items[0]; 
+  });
+
+  const onClearFavorites = () => {
+          dispatch(clearFavorites()); 
+
+    
+  };
+  
   return (
     <>
-      <Link className='blog-goBack' to='/'>
-        <span> &#8592;</span> <span>Goooooo Back</span>
-      </Link>
 
-      {/* {blog ? ( */}
+    <Link className='blog-goBack' 
+      to='/'>
+            <Button onClick={onClearFavorites}> 
+            Goooooo back
+        </Button>
+
+
+      </Link>
 
       
         <div className='blog-wrap'>
-          <header>
-            {/* <p className='blog-date'>Published {blog.createdAt}</p> */}
-            {/* <h1>{blog.title}</h1> */}
-            <div className='blog-subCategory'>
-             
-             
-            </div>
-          </header>
-          {/* <img src={blog.cover} alt='cover' /> */}
-          {/* <p className='blog-desc'>{blog.description}</p> */}
+
+        {addedGuides.map((obj) =>(
+<PopupItem 
+key={obj.id}
+id = {obj.id}
+title = {obj.title}
+createdAt = {obj.createdAt}
+cover = {obj.cover} 
+description = {obj.description} 
+ authorName = {obj.authorName}
+ authorAvatar = {obj.authorAvatar}
+
+/>
+))}
 
 
 
 
-          <div class="comments">
+
+
+ <div className="comments">
 
 <h2>Leave a comment</h2>
 
@@ -70,18 +82,26 @@ const Popup = () => {
   </div>
 <Button> Send</Button>
 </form>
-
 <div className="comments__list">
 </div>
-</div>
+</div>  
 
 
         </div>
-      {/* ) : (
-        <EmptyList />
-      )} */}
+    
     </>
   );
 };
 
+
+
+
+const mapStateToProps = (items, ownProps) => {
+  let id = ownProps.match.params.post_id;
+  return {
+    post: items.posts.find(post => post.id === id)
+  }
+}
+
 export default Popup;
+

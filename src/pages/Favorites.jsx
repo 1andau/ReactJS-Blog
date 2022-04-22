@@ -8,6 +8,7 @@ function Favorites() {
         <h1>Favorites</h1>
 
     </div>
+
   )
 }
 

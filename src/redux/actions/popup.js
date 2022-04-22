@@ -1,4 +1,9 @@
-export const addGuideToCart = (guideObj) => ({
-    type: 'ADD_GUIDE_CART', 
-    payload: guideObj,
-    });
+export const addBlogToCart = (blogObj) => ({
+    type: 'ADD_BLOG_CART', 
+    payload: blogObj,
+    }); 
+
+    export const clearFavorites = () => ({
+        type: 'CLEAR_CART_FAVORITES', 
+        });
+    

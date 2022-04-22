@@ -6,26 +6,36 @@ import { fetchBlogs } from '../redux/actions/blog';
 
 const Home = () => {
   const dispatch = useDispatch();
+
   const items = useSelector(({blogs})=> blogs.items); //map
+  const cardItems = useSelector(({popup})=> popup.items); 
 
   React.useEffect(() => {
     dispatch(fetchBlogs());
      }, []);
     
-    
- 
+     const handleAddFavoritesToCart = (obj) => {
+      dispatch({
+        type: 'ADD_FAVORITES_TO_CART', 
+      payload: obj,
+      });
+      };
+
+
 
   return (
     <div>
 
 <div className="blogList-wrap">
-     
+
 {
 items.map((obj) => ( 
 
 <Cards 
- key={obj.id}
- {...obj}
+ReadMore = {handleAddFavoritesToCart}
+key={obj.id}
+addedCountFav={cardItems[obj.id] }
+{...obj}
    />
 
    
