@@ -74,9 +74,88 @@
 
     
   }
+  ], 
+
+  "gallery" : [
+{
+  "id": 1,
+  "imageURL" : "https://images.pexels.com/photos/421129/pexels-photo-421129.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+
+
+{
+  "id": 2,
+  "imageURL" : "https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+
+
+{
+  "id": 3,
+  "imageURL" : "https://images.pexels.com/photos/1086583/pexels-photo-1086583.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", 
+"text" : ""
+}, 
+
+
+{
+  "id": 4,
+  "imageURL" : "https://images.pexels.com/photos/2420306/pexels-photo-2420306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+
+
+{
+  "id": 5,
+  "imageURL" : "https://images.pexels.com/photos/3342739/pexels-photo-3342739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+
+
+{
+  "id": 6,
+  "imageURL" : "https://images.pexels.com/photos/1089194/pexels-photo-1089194.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+
+
+{
+  "id": 7,
+  "imageURL" : "https://images.pexels.com/photos/2599245/pexels-photo-2599245.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+
+
+{
+  "id": 8,
+  "imageURL" : "https://images.pexels.com/photos/2120005/pexels-photo-2120005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+
+
+{
+  "id": 9,
+  "imageURL" : "https://images.pexels.com/photos/1083807/pexels-photo-1083807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+},
+
+{
+  "id": 10,
+  "imageURL" : "https://images.pexels.com/photos/1185434/pexels-photo-1185434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+{
+  "id": 11,
+  "imageURL" : "https://images.pexels.com/photos/3355389/pexels-photo-3355389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
+"text" : ""
+}, 
+{
+  "id": 12,
+  "imageURL" : "  https://images.pexels.com/photos/2949302/pexels-photo-2949302.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500  ", 
+"text" : ""
+}
   ]
   }
-
 
 
 

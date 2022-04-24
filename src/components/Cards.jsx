@@ -15,7 +15,7 @@ function Cards( {
 
 
     const onClickReadMore = () => {
-    ReadMore({title, createdAt, authorName, id, description,authorAvatar, cover, authorName, authorAvatar  })
+    ReadMore({title, createdAt, id, description, cover, authorName, authorAvatar  })
   
     }
 
@@ -41,7 +41,7 @@ function Cards( {
         onClick={onClickReadMore}>
 
         <svg width="80" height="80" viewBox="0 0 108 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 50H93M93 50L62.1654 20M93 50L62.1654 80" stroke="#BF00C2" stroke-width="12"/>
+        <path d="M4 50H93M93 50L62.1654 20M93 50L62.1654 80" stroke="#BF00C2" strokeWidth="12"/>
         </svg>
        
         

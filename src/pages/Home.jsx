@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Cards from '../components/Cards';
 import { fetchBlogs } from '../redux/actions/blog';
 import Header from '../components/Header';
-
+import Button from '../components/Button';
 const Home = () => {
   const dispatch = useDispatch();
 
@@ -27,7 +27,19 @@ const Home = () => {
     <div>
         <Header/>
 
+        <div className="container">
+  <div className="search-box">
+    <input type="text" placeholder="Enter something...."/>
+    <Button type="button"><span>Search</span></Button>
+  </div>
+</div>
+  
+
+
 <div className="blogList-wrap">
+
+
+
 
 {
 items.map((obj) => ( 

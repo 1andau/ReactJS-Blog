@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../components/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import PopupItem from './PopupItem';
 import {clearFavorites} from '../redux/actions/popup'
@@ -27,8 +26,7 @@ function Popup () {
 
     <Link className='button_account' 
       to='/' onClick={onClearFavorites}>
-            Goooooo back
-
+<span> Goooooo back</span>
 
       </Link>
 
@@ -61,12 +59,6 @@ description = {obj.description}
 
 
 
-const mapStateToProps = (items, ownProps) => {
-  let id = ownProps.match.params.post_id;
-  return {
-    post: items.posts.find(post => post.id === id)
-  }
-}
 
 export default Popup;
 
