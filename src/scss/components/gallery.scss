@@ -80,7 +80,7 @@ cursor: pointer;
 }
 
 @media (max-width: 991px){
-    .gallery{
+    .content{
         -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;  
@@ -91,7 +91,7 @@ cursor: pointer;
 }
 
 @media (max-width: 480px){
-    .gallery{
+    .content{
         -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
@@ -111,5 +111,20 @@ cursor: pointer;
     min-height: 200px;
     min-width: 250px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
