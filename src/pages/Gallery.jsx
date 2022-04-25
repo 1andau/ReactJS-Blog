@@ -19,10 +19,11 @@ React.useEffect(() => {
 
 
 
-   const [image, setImage] = useState('');
+const [image, setImage] = useState('');
 const clientId = '9GznlxJrijID_MOPKOJ5xnsg_hE5Ed8FXuPRD-15sbY';
 const [result, setResult] = useState([]);
-  
+
+
 const handleChange = (event) => {
   setImage(event.target.value);
   };
@@ -35,13 +36,14 @@ const handleChange = (event) => {
   setResult(response.data.results);
   });
   };
+  
   return (
 
 
     <div>
-        <Header/>
 
- 
+
+        <Header/>
   <div className="container">
   <div className="search-box">
     <input onChange={handleChange} type="text" placeholder="search images...."/>
@@ -49,23 +51,29 @@ const handleChange = (event) => {
   </div>
 </div>
 
+
+
+
+
 {
   image? 
 
-  <div className="content">
+<div className="content">
   {result.map((image) => (
-  <>
-   <div className="pics">
-    <img className='imageGallery' src={image.urls.thumb}
-    
-    
-    />
-    {/* <p className="username"> Photo by {image.user.name}</p>
-    <p className="like">👍 {image.likes}</p> */}
-   </div>
-  </>
-   ))}
+  <div className="pics">
+   <img className='imageGallery' src={image.urls.regular}
+   />
+   {/* <p className="username"> Photo by {image.user.name}</p> 
+   <p className="like">👍 {image.likes}</p>  */}
+
+  </div>
+  
+  ))}
 </div>
+
+
+
+
 
 
 
@@ -90,14 +98,6 @@ const handleChange = (event) => {
 
 
 }
-
-
-
-
-
-
-
-
 
 
 

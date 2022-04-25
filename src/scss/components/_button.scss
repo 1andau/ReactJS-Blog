@@ -1,14 +1,13 @@
-@import '../variables';
 
 .button {
   display: inline-block;
-  background-color: $purple;
+  background-color: #8e44ad;
   border-radius: 30px;
   padding: 10px 20px;
   min-width: 100px;
   text-align: center;
   cursor: pointer;
-  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   color: #fff;
   border: 1px solid transparent;
   @include noselect();
@@ -18,35 +17,35 @@
   span,
   path,
   svg {
-    transition: all $duration ease-in-out;
+    transition: all 0.15s  ease-in-out;
     font-weight: bold;
 
   }
 
   &:hover {
-    background-color: darken($purple, 8%);
+    background-color: darken(#8e44ad, 8%);
   }
 
   &:active {
-    background-color: darken($purple, 12%);
+    background-color: darken(#8e44ad, 12%);
     transform: translateY(1px);
   }
 
   &--outline {
     background-color: #fff;
-    border-color:$purple;
+    border-color:#8e44ad;
     &,
     span {
-      color: $purple;
+      color: #8e44ad;
     }
 
     svg {
       path {
-        fill: $purple;
+        fill: #8e44ad;
       }
     }
     &:hover {
-      background-color: $purple;
+      background-color: #8e44ad;
 
       &,
       span {

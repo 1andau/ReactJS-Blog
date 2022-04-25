@@ -5,37 +5,31 @@ function Account() {
   return (
     <div className='account'>
 <Header/>
+
+
+
 <main id="main" className="flexbox-col-start-center">
-
-  <div className="view-width">
-
-    <section className="profile-header">
-      <div className="profile-header-inner flexbox">
-        <div className="phi-info-wrapper flexbox">
-          <div className="phi-info-left flexbox">
-            <div className="phi-profile-picture-wrapper">
-              <div className="phi-profile-picture-inner flexbox">
-                <img className="phi-profile-picture" src="https://images.unsplash.com/photo-1586156719269-d2f9faf80446?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt=""/>
-              </div>
-            </div>
-            <div className="phi-profile-username-wrapper flexbox-col-left">
-              <h3 className="phi-profile-username flexbox">Username verified</h3>
-            </div>
-          </div>
-          <div className="phi-info-right flexbox-right">
-            <div>
-         
-            </div>
-          </div>
-        </div>
-        <div className="profile-header-overlay"></div>
-        <img className="profile-header-image" src="https://images.unsplash.com/photo-1616808943301-d80596eff29f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2010&q=80" alt=""/>
+<section class="profile">
+  <header class="header">
+    <div class="details">
+      <img src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=b38c22a46932485790a3f52c61fcbe5a" alt="John Doe" class="profile-pic"/>
+      <h1 class="heading">Claire Doe</h1>
+      <div class="location">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12 ,2Z"></path>
+</svg>
+        <p>Kochi, India</p>
       </div>
-    </section>
+      <div class="stats">
+      
+      
+     
+      </div>
+    </div>
+  </header>
+</section>
+  {/* ===========================comment========================================= */}
 
- 
-
-  </div>
   <form id="newQuote">
         <label for="author">Your Name</label>
         <input type="text" id="author" />
