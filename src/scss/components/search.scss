@@ -1,4 +1,5 @@
 @import './button'; 
+@import '../libs//normalize';
 
 
 @mixin bg-effect {
@@ -7,10 +8,7 @@
     height: 100%;
     top: 0;
     width: 100%;
-  
-    // border:0.5rem solid #000;
     box-sizing: border-box;
-    // mix-blend-mode: overlay;
   }
   
     .search-box {

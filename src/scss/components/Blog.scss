@@ -1,19 +1,14 @@
+@import '../libs//normalize';
 
 .blog-wrap {
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: 100px;
+  
 
 }
 
-.blog-goBack {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #ffffff;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  display: block;
-}
+
 .blog-wrap header {
   text-align: center;
 }
@@ -33,7 +28,6 @@
   padding: 1rem;
   margin-top: 1.5rem;
 }
-
 
 
 

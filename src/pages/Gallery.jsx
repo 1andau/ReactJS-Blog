@@ -63,9 +63,7 @@ const handleChange = (event) => {
   <div className="pics">
    <img className='imageGallery' src={image.urls.regular}
    />
-   {/* <p className="username"> Photo by {image.user.name}</p> 
-   <p className="like">👍 {image.likes}</p>  */}
-
+ 
   </div>
   
   ))}

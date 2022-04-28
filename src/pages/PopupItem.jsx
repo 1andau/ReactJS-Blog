@@ -18,6 +18,7 @@ function PopupItem({title, cover, createdAt, description}) {
 
 
  <div className="comments">
+ 
 
 <h2>Leave a comment</h2>
 
@@ -26,9 +27,7 @@ function PopupItem({title, cover, createdAt, description}) {
 
     <div className="comments__form-field">
       <input id="comments__form-label-name" name="author" placeholder="Name" type="text" className="comments__form-input"/>
-      <label className="comments__form-label" for="comments__form-label-name">
-        <span className="comments__form-label-text">Name</span>
-      </label>
+    
     </div>
   </div>
 
@@ -36,9 +35,7 @@ function PopupItem({title, cover, createdAt, description}) {
     
     <div className="comments__form-field">
       <textarea id="comments__form-label-text" name="author" placeholder="Express your thoughts" type="text" className="comments__form-input comments__form-textarea"></textarea>
-      <label className="comments__form-label" for="comments__form-label-text">
-        <span className="comments__form-label-text">Express your thoughts</span>
-      </label>
+     
     </div>
 
   </div>

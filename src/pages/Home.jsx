@@ -27,7 +27,7 @@ const Home = () => {
     <div>
         <Header/>
 
-        <div className="container">
+ <div className="container">
   <div className="search-box">
     <input type="text" placeholder="Enter something...."/>
     <Button type="button"><span>Search</span></Button>
@@ -37,10 +37,6 @@ const Home = () => {
 
 
 <div className="blogList-wrap">
-
-
-
-
 {
 items.map((obj) => ( 
 

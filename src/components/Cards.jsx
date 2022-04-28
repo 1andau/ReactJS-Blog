@@ -35,21 +35,14 @@ function Cards( {
             <p>{createdAt}</p>
           </div>
         </div>
-
- 
        <Link className='blogItem-link' to='/popup'
         onClick={onClickReadMore}>
 
-        <svg width="80" height="80" viewBox="0 0 108 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 50H93M93 50L62.1654 20M93 50L62.1654 80" stroke="#BF00C2" strokeWidth="12"/>
-        </svg>
-       
-        
-          
+<svg width="100" height="38" viewBox="0 0 121 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M121 29L71 0.132493L71 57.8675L121 29ZM-4.37114e-07 34L76 34L76 24L4.37114e-07 24L-4.37114e-07 34Z" fill="#BB3395"/>
+</svg>
         </Link> 
-        
-
-      </footer>
+     </footer>
     </div>
   
   );

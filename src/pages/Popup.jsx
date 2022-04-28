@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import PopupItem from './PopupItem';
 import {clearFavorites} from '../redux/actions/popup'
 import Header from '../components/Header';
-
+import Button from '../components/Button';
 function Popup () {
 
   const dispatch = useDispatch();
@@ -24,11 +24,12 @@ function Popup () {
     <>
         <Header/>
 
-    <Link className='button_account' 
-      to='/' onClick={onClearFavorites}>
-<span> Goooooo back</span>
-
-      </Link>
+    <Link className='' 
+      to='/home' onClick={onClearFavorites}>
+<Button>
+<span> Go back</span>
+</Button>  
+    </Link>
 
       
         <div className='blog-wrap'>
