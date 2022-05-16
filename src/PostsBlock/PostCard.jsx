@@ -2,6 +2,7 @@ import React from 'react';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
+// import { useUserContext } from '../context/userContext';
 
 export const Post = ({
   id,
@@ -33,7 +34,7 @@ export const Post = ({
     <img className='blogItem-cover' src={thumbnail} alt='cover' />
     </Link>
     <h3>{title}</h3>
-    <p className='blogItem-desc'>{finalDescription}</p>
+    <h6 className='blogItem-desc'>{finalDescription}</h6>
     <footer>
      
      <Link className='blogItem-link' to={`/blog/${id}`}>

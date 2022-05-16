@@ -1,7 +1,6 @@
 import axios from 'axios'; 
 
 export const fetchGallery = () => (dispatch) => {
-   console.log();
  
     dispatch({
        type: 'SET_LOADED_GALLERY',

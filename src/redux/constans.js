@@ -19,7 +19,10 @@ export const POSTS = [
     },
   ];
   
+
+  
   export const POSTS_URL = 'https://62498140852fe6ebf87c0dad.mockapi.io/unUsual/unUsual/';
   
 
-  
+
+

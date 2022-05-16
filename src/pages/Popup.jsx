@@ -21,7 +21,7 @@ function Popup () {
   };
   
   return (
-    <>
+    <div className='container'>
         <Header/>
 
     <Link className='' 
@@ -53,7 +53,7 @@ description = {obj.description}
 
         </div>
     
-    </>
+    </div>
   );
 };
 

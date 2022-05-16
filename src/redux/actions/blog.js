@@ -1,7 +1,6 @@
 import axios from 'axios'; 
 
 export const fetchBlogs = () => (dispatch) => {
-   console.log();
  
     dispatch({
        type: 'SET_LOADED',

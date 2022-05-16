@@ -157,9 +157,33 @@
   "imageURL" : "  https://images.pexels.com/photos/2949302/pexels-photo-2949302.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500  ", 
 "text" : ""
 }
-  ]
-  }
+  ],
 
+  "users": [
+    {
+      "uid": {
+        "name": "Bill",
+        "surname": "Gates"
+      },
+      "uid2": {
+        "name": "Bill",
+        "surname": "Gates"
+      }, 
+
+      
+        "rules": {
+            "users": {
+                "$uid": {
+                    ".write": "$uid == auth.uid"
+                }
+            }
+        }
+    
+
+      
+    }
+  ]
+}
 
 
 

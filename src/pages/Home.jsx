@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Cards from '../components/Cards';
 import { fetchBlogs } from '../redux/actions/blog';
@@ -10,6 +10,8 @@ const Home = () => {
   const items = useSelector(({blogs})=> blogs.items); //map
   const cardItems = useSelector(({popup})=> popup.items); 
 
+
+const [value, setValues] = useState(''); 
   React.useEffect(() => {
     dispatch(fetchBlogs());
      }, []);
@@ -24,21 +26,18 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className='container'>
         <Header/>
 
- <div className="container">
-  <div className="search-box">
-    <input type="text" placeholder="Enter something...."/>
-    <Button type="button"><span>Search</span></Button>
-  </div>
-</div>
+
   
 
 
 <div className="blogList-wrap">
 {
-items.map((obj) => ( 
+items
+
+.map((obj) => ( 
 
 <Cards 
 ReadMore = {handleAddFavoritesToCart}
@@ -49,7 +48,7 @@ addedCountFav={cardItems[obj.id] }
 
    
    ))
- }
+ };
 
 
     </div>

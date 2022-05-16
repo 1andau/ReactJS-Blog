@@ -10,7 +10,6 @@ const favCart = (state = initialState, action) => {
         ? [action.payload]
         : [...state.items[action.payload.id].items, action.payload];
 
-console.log(favCart);
 
       const newItems = {
         ...state.items,

@@ -26,7 +26,7 @@ export const EditForm = ({ setShowEditForm, selectedPost }) => {
       title: postTitle,
       description: postDesc,
     };
-
+  //updatedPost  содержит fetch() 
     dispatch(editPost(updatedPost)).finally(() => setShowEditForm(false));
   };
 
