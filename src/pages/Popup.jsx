@@ -21,20 +21,21 @@ function Popup () {
   };
   
   return (
-    <div className='container'>
-        <Header/>
+    <>
+            <Header/>
+            <div className='container'>
 
-    <Link className='' 
-      to='/home' onClick={onClearFavorites}>
+<Link className='' 
+  to='/home' onClick={onClearFavorites}>
 <Button>
 <span> Go back</span>
 </Button>  
-    </Link>
+</Link>
 
-      
-        <div className='blog-wrap'>
+  
+    <div className='blog-wrap'>
 
-        {addedGuides.map((obj) =>(
+    {addedGuides.map((obj) =>(
 <PopupItem 
 key={obj.id}
 id = {obj.id}
@@ -42,18 +43,17 @@ title = {obj.title}
 createdAt = {obj.createdAt}
 cover = {obj.cover} 
 description = {obj.description} 
- authorName = {obj.authorName}
- authorAvatar = {obj.authorAvatar}
+authorName = {obj.authorName}
+authorAvatar = {obj.authorAvatar}
 
 />
 ))}
 
-
-
-
-        </div>
-    
     </div>
+
+</div>
+    </>
+
   );
 };
 

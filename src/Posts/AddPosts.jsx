@@ -6,7 +6,6 @@ import { Avatar } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from 'firebase/firestore';
-import Header from '../components/Header';
 import Button from '../components/Button';
 
 function AddPosts({}) {
@@ -82,6 +81,7 @@ function AddPosts({}) {
             <div className='input-box'>
 
             <input 
+            className='title_input'
           value={subtitle}
           placeholder='Enter title'
           onChange={(e) => setSubtitle(e.target.value)} 
@@ -104,15 +104,16 @@ function AddPosts({}) {
         </div>
         <div className='tweetOptions'>
             <div className='tweetAttachment'>
-                <div onClick={()=>{fileref.current.click()}}>
-                  <AddPhotoAlternateIcon/>
-                <i className='bx bx-image-alt'></i>
+                <div className='hover-effect' onClick={()=>{fileref.current.click()}}>
+                  <Button className="button--circle" outline>
+                  <AddPhotoAlternateIcon className='icon'/>
+                  </Button>
                 <input type="file" onChange={addImage} ref={fileref} hidden />
                 </div>
-
             </div>
-            <div className='tweetButton'>
+            <div className=''>
                 <Button disabled={!input.trim() && !subtitle.trim() && !file} variant="contained" onClick={postSend}>Send</Button>
+
             </div>
         </div>
     

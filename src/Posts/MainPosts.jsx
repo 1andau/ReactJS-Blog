@@ -24,7 +24,7 @@ function MainPosts() {
 
   return (
 
-<div className="Posts_container">
+<div className="container">
 <div className="taskManager">
       <Header />
       

@@ -5,8 +5,9 @@ import Button from '../components/Button';
 import {useState} from 'react'; 
 import {database} from '../authorization/firebase'; 
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
-
-function Posts({post, id , title}) {
+import DeleteIcon from '@mui/icons-material/Delete';
+import CommentsDisabledIcon from '@mui/icons-material/CommentsDisabled';
+function Posts({post, id , caption}) {
     const navigate = useNavigate();
     const user = JSON.parse(sessionStorage.getItem('AuthToken'));
     let userId;
@@ -15,8 +16,7 @@ function Posts({post, id , title}) {
     }else {
         userId = user.localId;
     }
-    
-
+  
 
   const handleDelete = async () => {
     const taskDocRef = doc(database, 'posts', id)
@@ -32,18 +32,18 @@ function Posts({post, id , title}) {
 
   return (
 
-<div className="Posted">
+<>
 
 
 
-<div className='post_box' onClick={()=>navigate(`/posts/${id}`)}>
+<div className='post' onClick={()=>navigate(`/posts/${id}`)}>
      <div className="post_avatar">
             <Avatar src={post?.userImg} sx={{ width: 50, height: 50 }}/>
         </div>
         <div className="post_body">
             <div className="post_header">
                 <div className="post_headerNames">
-                    <h3 style={{fontWeight: "500"}}>{post?.username}</h3>
+                    <h3>{post?.username}</h3>
                     <p> • <span>
                         <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
                         </span> </p>
@@ -71,11 +71,16 @@ function Posts({post, id , title}) {
 
 </div>
 
-<button className='task__deleteButton' onClick={handleDelete}>Delete</button>
+<div className="icons">
+<Button className="button--circle" outline>
+<DeleteIcon className='' onClick={handleDelete}></DeleteIcon>
+</Button>
 
-
-
+<Button className="button--circle" outline>
+  <CommentsDisabledIcon></CommentsDisabledIcon>
+</Button>
 </div>
+</>
   )
 }
 

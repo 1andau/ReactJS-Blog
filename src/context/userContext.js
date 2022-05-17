@@ -1,7 +1,7 @@
-// import { createContext, useContext, useState } from 'react';
 import { GoogleAuthProvider,GithubAuthProvider, getAuth,signInWithPopup } from "firebase/auth"
 import { useNavigate } from 'react-router-dom';
-
+import GoogleIcon from '../assets/google.svg'
+import GithubIcon from '../assets/github.svg'
 
 export const ExternalAuth = ({text}) => {
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ export const ExternalAuth = ({text}) => {
                 <div className="under-logo">
                   <img
                     className="auth__buttnon-logo"
-                    // src={googleLogo}
+                    src={GoogleIcon}
                     alt=""
                   />
                 </div>
@@ -77,7 +77,7 @@ export const ExternalAuth = ({text}) => {
                 <div className="under-logo">
                   <img
                     className="auth__buttnon-logo"
-                    // src={githubLogo}
+                    src={GithubIcon}
                     alt=""
                   />
                 </div>
@@ -88,10 +88,7 @@ export const ExternalAuth = ({text}) => {
             </div>
           </div>
         </div>
-        {/* <Link to="/">
-          {' '}
-          <Button> View without authorization</Button>
-        </Link> */}
+     
       </div>
     </div>
     </>
@@ -99,111 +96,3 @@ export const ExternalAuth = ({text}) => {
 } 
 
 
-
-
-
-
-
-
-  // const googleSignup = () => {
-  //   setLoading(true);
-  //   setError('');
-  //   signInWithPopup(auth, new GithubAuthProvider())
-  //     .then((res) => console.log(res))
-  //     .catch((err) => setError(err.code))
-  //     .finally(() => setLoading(false));
-  // };
-
-// let aUID = '';
-
-// auth.onAuthStateChanged((user) => {
-//   if (user) {
-//     aUID = user.uid;
-//   }
-// });
-
-// export const UserContext = createContext({});
-// export const useUserContext = () => {
-//   return useContext(UserContext);
-// };
-
-// export function createUser(userId) {
-//   return db
-//     .collection('users')
-//     .doc(aUID)
-//     .set({
-//       userInfo: {
-//         id: `${auth.currentUser.uid}`,
-//         imageUrl: `${auth.currentUser.photoURL}`,
-//         name: `${auth.currentUser.displayName}`,
-//         email: `${auth.currentUser.email}`,
-
-//       },
-//     });
-// }
-
-
-// export function getAllUsers() {
-//   const tempDoc = [];
-//   return db
-//     .collection('users')
-//     .get()
-//     .then((snapshot) => {
-//       snapshot.docs.map((doc) => {
-//         tempDoc.push(doc.id);
-//       });
-//       return tempDoc;
-//     });
-// }
-
-// export const UserContextProvider = ({ children }) => {
-//   const [user, setUser] = useState(null);
-//   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState('');
-
-//   useState(() => {
-//     setLoading(true);
-//     const unsubscribe = onAuthStateChanged(auth, (res) => {
-//       if (res) {
-//         setUser(res);
-//       } else {
-//         setUser(null);
-//       }
-//       setError('');
-//       setLoading(false);
-//     });
-//     return unsubscribe;
-//   }, []);
-
-//   const signInWithGoogle = () => {
-//     setLoading(true);
-//     setError('');
-
-//     signInWithPopup(auth, new GoogleAuthProvider())
-//       .then((res) => console.log(res))
-//       .catch((err) => setError(err.code))
-//       .finally(() => setLoading(false));
-//   };
-
-//   const signInWithGithub = () => {
-//     setLoading(true);
-//     setError('');
-//     signInWithPopup(auth, new GithubAuthProvider())
-//       .then((res) => console.log(res))
-//       .catch((err) => setError(err.code))
-//       .finally(() => setLoading(false));
-//   };
-
-//   const logoutUser = () => {
-//     signOut(auth);
-//   };
-
-//   const contextValue = {
-//     user,
-//     loading,
-//     logoutUser,
-//     signInWithGoogle,
-//     signInWithGithub,
-//   };
-//   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
-// };

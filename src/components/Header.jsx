@@ -1,13 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import {useUserContext} from '../context/userContext'
-import logo from '../assets/unuser.png';
 import { useNavigate } from 'react-router-dom';
 import Button from './Button';
-
-// const Header = React.memo(function Header({email, displayName, photoURL}) {
-//   const { user, logoutUser } = useUserContext();
-//   console.log(user);
 
 function Header() {
 
@@ -18,7 +12,7 @@ return (
   <div className="container">
     <div className="content__top">
       <header id="header_nav">
-        <Link className="logo" alt="logo" to="/">
+        <Link className="logo" alt="logo" to="/home">
           <svg
             width="70"
             height="30"
@@ -45,11 +39,9 @@ return (
             <Link className="links" to="/gallery">
               Gallery
             </Link>
-            <Link className="links" to="/account">
-              Account
-            </Link>
+         
             <Link className="links" to="/MainPosts">
-              posts
+              Posts
             </Link>
           </ul>
         </nav>

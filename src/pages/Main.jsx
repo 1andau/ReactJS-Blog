@@ -10,7 +10,7 @@ function Main() {
     <div className="wrapper_start">
       <div className="start_page">
         <div className="nav_start">
-          <Link className="logo_start" alt="logo" to="/">
+          <Link className="logo_start" alt="logo" to="/home">
             <svg
               width="70"
               height="30"

@@ -10,9 +10,7 @@ function Cards( {
   cover,
   id,
   ReadMore, 
-
 }) {
-
 
     const onClickReadMore = () => {
     ReadMore({title, createdAt, id, description, cover, authorName, authorAvatar  })

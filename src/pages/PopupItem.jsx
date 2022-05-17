@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from '../components/Button'
-import Comment from '../Posts/Comment';
 function PopupItem({title, cover, createdAt, description}) {
 
 
@@ -17,7 +16,7 @@ function PopupItem({title, cover, createdAt, description}) {
     <p className='blog-desc'>{description}</p>
 
 
-<Comment/> 
+
   </div>
   )
 }
