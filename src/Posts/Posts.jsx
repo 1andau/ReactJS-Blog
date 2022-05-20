@@ -7,6 +7,7 @@ import {database} from '../authorization/firebase';
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import DeleteIcon from '@mui/icons-material/Delete';
 import CommentsDisabledIcon from '@mui/icons-material/CommentsDisabled';
+
 function Posts({post, id , caption}) {
     const navigate = useNavigate();
     const user = JSON.parse(sessionStorage.getItem('AuthToken'));
@@ -17,7 +18,7 @@ function Posts({post, id , caption}) {
         userId = user.localId;
     }
   
-
+    
   const handleDelete = async () => {
     const taskDocRef = doc(database, 'posts', id)
     try{
@@ -31,11 +32,7 @@ function Posts({post, id , caption}) {
 
 
   return (
-
 <>
-
-
-
 <div className='post' onClick={()=>navigate(`/posts/${id}`)}>
      <div className="post_avatar">
             <Avatar src={post?.userImg} sx={{ width: 50, height: 50 }}/>

@@ -7,7 +7,8 @@ export const fetchBlogs = () => (dispatch) => {
        payload: false,    
  });
  
-    axios.get("http://localhost:3001/blogs").then(({data}) => {
+    axios.get("https://6283ee0438279cef71de493c.mockapi.io/blogs")
+    .then(({data}) => {
  dispatch(setBlogs(data));
     });  
  };

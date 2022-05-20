@@ -57,7 +57,6 @@ export const ExternalAuth = ({text}) => {
 
           <div className="auth-ways">
             <div className="auth__buttnon" onClick={googleSignup}>
-              {text}
               <div className="button-content">
                 <div className="under-logo">
                   <img
@@ -72,7 +71,6 @@ export const ExternalAuth = ({text}) => {
               <div className="auth__button-transition"></div>
             </div>
             <div className="auth__buttnon" onClick={githubSignup}>
-              {text}
               <div className="button-content">
                 <div className="under-logo">
                   <img

@@ -31,6 +31,7 @@ function MainPosts() {
       <div className="taskManager__container">
 
           <AddPosts />
+          
           {posts.map((el) => (
             <Posts key={el.id} id={el.id} post={el.data()} />
           ))}

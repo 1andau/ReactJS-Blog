@@ -17,16 +17,16 @@ useEffect(
     [database]
   );
 
-  useEffect(
-    () =>
-      onSnapshot(
-        query(
-          collection(database, "posts", id, "comments"),
-          orderBy("timestamp", "desc")
-        )
-      ),
-    [database, id]
-  );
+  // useEffect(
+  //   () =>
+  //     onSnapshot(
+  //       query(
+  //         collection(database, "posts", id, "comments"),
+  //         orderBy("timestamp", "desc")
+  //       )
+  //     ),
+  //   [database, id]
+  // );
   console.log(post,id);
 
   return (

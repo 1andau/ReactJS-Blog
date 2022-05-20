@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import PopupItem from './PopupItem';
 import {clearFavorites} from '../redux/actions/popup'
-import Header from '../components/Header';
 import Button from '../components/Button';
-function Popup () {
-
+import Cards from './PostCard';
+import PopupItem from './PopupItem';
+import Header from '../components/Header';
+const PostPage = () => {
   const dispatch = useDispatch();
   const {items} = useSelector(({popup}) => popup); 
 
@@ -19,23 +19,22 @@ function Popup () {
 
     
   };
-  
-  return (
-    <>
-            <Header/>
-            <div className='container'>
 
-<Link className='' 
-  to='/home' onClick={onClearFavorites}>
-<Button>
-<span> Go back</span>
-</Button>  
-</Link>
+return (
+  <div className='container'>
+<Header/>
+    <Link className='blog-goBack' 
+      to='/home'>
+            <Button onClick={onClearFavorites}> 
+            Goooooo back
+        </Button>
 
-  
-    <div className='blog-wrap'>
 
-    {addedGuides.map((obj) =>(
+      </Link>
+
+      <div className='blog-wrap'>
+
+{addedGuides.map((obj) =>(
 <PopupItem 
 key={obj.id}
 id = {obj.id}
@@ -49,17 +48,18 @@ authorAvatar = {obj.authorAvatar}
 />
 ))}
 
-    </div>
-
 </div>
-    </>
+</div>
+);
 
-  );
+
+
+
 };
 
 
 
 
 
-export default Popup;
+export default PostPage;
 

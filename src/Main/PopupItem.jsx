@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../components/Button'
-function PopupItem({title, cover, createdAt, description}) {
+
+function PopupItem({title, cover, createdAt, description, authorAvatar}) {
 
 
 
@@ -11,12 +11,13 @@ function PopupItem({title, cover, createdAt, description}) {
       <p className='blog-date'>Published {createdAt}</p>
       <h1>{title}</h1>
 
+
+      <div className='blog-subCategory'>
+      
+      </div>
     </header>
     <img src={cover} alt='cover' />
     <p className='blog-desc'>{description}</p>
-
-
-
   </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import Button from './Button';
-
+import LogoutIcon from '@mui/icons-material/Logout';
 function Header() {
 
   const user = JSON.parse(sessionStorage.getItem('AuthToken'));
@@ -69,7 +69,7 @@ return (
             <img src={user.photoURL} alt="user-img" className='avatar' />
           </div>
           <div className='logout-bar'>
-            <Button> log out</Button>
+            <LogoutIcon className='logOut'></LogoutIcon>
           </div>
           </> 
         }
