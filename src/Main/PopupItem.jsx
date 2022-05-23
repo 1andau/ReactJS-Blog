@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PopupItem({title, cover, createdAt, description, authorAvatar}) {
+function PopupItem({title, cover, createdAt, description}) {
 
 
 

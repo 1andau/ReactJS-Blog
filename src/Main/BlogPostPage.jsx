@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {clearFavorites} from '../redux/actions/popup'
 import Button from '../components/Button';
-import Cards from './PostCard';
 import PopupItem from './PopupItem';
 import Header from '../components/Header';
 const PostPage = () => {

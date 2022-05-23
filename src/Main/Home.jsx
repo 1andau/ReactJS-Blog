@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Cards from './PostCard';
 import { fetchBlogs } from '../redux/actions/blog';
 import Header from '../components/Header';
+import LoadingBlock from '../pages/LoadingBlock';
+
 const Home = () => {
 
   const dispatch = useDispatch();
 
   const items = useSelector(({blogs})=> blogs.items); //map
+  const isLoaded = useSelector(({blogs})=> blogs.isLoaded);
 
   React.useEffect(() => {
     dispatch(fetchBlogs());
@@ -32,8 +35,8 @@ const Home = () => {
 
 <div className="blogList-wrap">
 
-{
-items.map((obj) => ( 
+{ isLoaded
+ ? items.map((obj) => ( 
 
 <Cards 
 ReadMore = {handleAddFavoritesToCart}
@@ -41,10 +44,12 @@ key={obj.id}
 addedCountFav={items[obj.id] }
 {...obj}
    />
-
-   
-   ))
- }
+   )) :
+   Array(10)
+   .fill(0)
+   .map((_,index) => 
+   <LoadingBlock key ={index}/>
+ )}
 
 
     </div>

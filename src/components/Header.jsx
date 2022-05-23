@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import Button from './Button';
 import LogoutIcon from '@mui/icons-material/Logout';
 function Header() {
 
@@ -64,7 +63,8 @@ return (
             <p>{user.email.split("@")[0]}</p>
             <p>@{user.email.split("@")[0]}</p>
           </div>
-          </> : <>
+          </> :
+           <>
           <div className='user-img'> 
             <img src={user.photoURL} alt="user-img" className='avatar' />
           </div>

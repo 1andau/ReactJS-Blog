@@ -6,7 +6,7 @@ import ModalImage from 'react-modal-image';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Button from '../components/Button';
-
+import LoadingGallery from './LoadingGallery';
 function Gallery() {
   const dispatch = useDispatch();
 
@@ -48,7 +48,7 @@ function Gallery() {
         <div className="content">
           {result.map((image) => (
             <div className="pics">
-              <img className="imageGallery" src={image.urls.regular}  />
+              <img className="imageGallery" src={image.urls.regular} />
             </div>
           ))}
         </div>

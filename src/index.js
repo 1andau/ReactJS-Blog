@@ -5,12 +5,15 @@ import './scss/app.scss';
 import App from './App';
 import store from './redux/store';
 import { Provider } from 'react-redux';
+import { RecoilRoot } from "recoil"
 
 ReactDOM.render(
   
   <Provider store={store}>
       <Router>
-        <App />
+<RecoilRoot>
+<App />
+</RecoilRoot>
       </Router>
   </Provider>,
 

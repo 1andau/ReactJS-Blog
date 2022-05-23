@@ -14,14 +14,17 @@ function AddPosts({}) {
   let userid;
   let name;
   let userimg;
+  let email;
   if (user.displayName !== '') {
     userid = user.uid;
     name = user.displayName;
     userimg = user.photoURL;
+    email = user.email;
   } else {
     userid = user.localId;
-    name = user.email.split('@')[0];
+    // name = user.email.split('@')[0];
     userimg = '';
+    email = '';
   }
 
   const [loading, setLoading] = useState(false);
@@ -29,6 +32,7 @@ function AddPosts({}) {
   const [file, setFile] = useState(null);
   const [input, setInput] = useState('');
   const [subtitle, setSubtitle] = useState(''); 
+const [comments, setComments] = useState([])
 
   const addImage = (e) => {
     const reader = new FileReader(); //асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя
@@ -50,6 +54,7 @@ function AddPosts({}) {
       userImg: userimg,
       caption: input,
       title: subtitle,
+      email: email,
       timestamp: serverTimestamp(),
     });
     const imgRef = ref(storage, `posts/${docRef.id}/image`);

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 function Cards( {   
    description,
   title,
@@ -13,8 +12,6 @@ function Cards( {
 
 }) {
 
-  const navigate = useNavigate(); 
-  
 
     const onClickReadMore = () => {
     ReadMore({title, createdAt, authorName, id, description,authorAvatar, cover, authorName, authorAvatar  })
